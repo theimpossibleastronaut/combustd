@@ -1,0 +1,6 @@
+Currently the combustd library and applications need a very generic set of dependencies. The core library only needs Ruby, libusb and ruby-usb available on your system. This makes it possible to run basically everywhere. Applications might have their own dependencies, for more information look for a INSTALL file in it's respective directory.
+
+Installing these dependencies might be as trivial as using your package manager (apt, aptitude, yum, ports, fink, etc.), if these fail or are missing request them at your maintainer or choose to install them from source.
+
+libusb: http://www.libusb.org/
+Ruby-usb: http://www.a-k-r.org/ruby-usb/

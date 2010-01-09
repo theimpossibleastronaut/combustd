@@ -1,0 +1,12 @@
+Combustd - A crossplatform toolkit for Ambx or compatible devices
+
+This application has been created in order to make the Ambx product usable on platforms outside the scope of Ambx's target group. Most of the project has been set up to create applications outside the normal usage pattern. Go wild, let your idea's flow. Make that usb controlled build monitor, access the your lights from the web. Use the power of the web to create controllable lights to indicate visitors. Use it for system monitoring.
+
+If you like this project, please consider how much you could contribute to it.
+All code in this project is licensed under the very liberal and fair BSD license unless specified otherwise, see the LICENSE file for more information.
+
+For dependencies read the file INSTALL.
+
+Enjoy!
+
+ps; for the newbs: cd examples/test-loop; ruby test-loop.rb

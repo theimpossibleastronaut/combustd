@@ -1,0 +1,7 @@
+class Lights
+  LEFT = 0x0B
+  RIGHT = 0x1B
+  WWLEFT = 0x2B
+  WWCENTER = 0x3B
+  WWRIGHT = 0x4B  
+end
