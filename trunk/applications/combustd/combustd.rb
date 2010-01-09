@@ -1,7 +1,4 @@
-require 'usb'
-require '../../libcombustd/data/protocoldefinitions'
-require '../../libcombustd/data/lights'
-require '../../libcombustd/communication/ambx'
+require '../../libcombustd/libcombustd'
 
 puts "\ncombustd - a small server to control a set of Philips Ambx lights.\n"
 puts "See README and docs/ for faq, usage and support.\n\n"
