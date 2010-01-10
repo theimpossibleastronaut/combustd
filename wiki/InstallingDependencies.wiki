@@ -9,9 +9,9 @@ If you are running on Windows you should use the following only as a guideline :
 
 = Installing =
 == Compiler toolchain ==
-If you are on Mac, you will need to install XCode to compile all dependencies, but since you're reading this page you will probably have done this already ;).
+If you are on Mac, you will need to install XCode to compile all dependencies, but since you're reading this page you will probably have done this already ;). XCode can be found on the Mac OS X install DVD, or it can be downloaded on [http://developer.apple.com Apple Developer Network].
 
-If you are on linux install the toolchain, on ubuntu this used to be _apt-get install build-essential_
+If you are on linux install the toolchain, on ubuntu this used to be _apt-get install build-essential_.
 
 == Ruby ==
 
