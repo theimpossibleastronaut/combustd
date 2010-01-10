@@ -4,6 +4,12 @@ REQUIREMENTPATH = File.dirname(__FILE__)
 # a ruby wrapper around libusb, needs to be compiled from source and gem installed.
 require 'usb'
 
+# Classes for definitions
 require REQUIREMENTPATH + '/data/protocoldefinitions'
 require REQUIREMENTPATH + '/data/lights'
+
+# Classes for logic
 require REQUIREMENTPATH + '/communication/ambx'
+
+# Classes for errors
+class CannotClaimInterfaceError < StandardError; end

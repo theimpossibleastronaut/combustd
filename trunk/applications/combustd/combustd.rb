@@ -1,4 +1,6 @@
-require '../../libcombustd/libcombustd'
+REQUIREMENTS = File.dirname(__FILE__)
+
+require REQUIREMENTS + '/../../libcombustd/libcombustd'
 
 puts "\ncombustd - a small server to control a set of Philips Ambx lights.\n"
 puts "See README and docs/ for faq, usage and support.\n\n"
