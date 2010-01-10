@@ -1,4 +1,4 @@
-#Configuring Boblight to show pretty colors with combustd on Linux
+#summary Configuring Boblight to show pretty colors with combustd on Linux
 
 = Description =
 
