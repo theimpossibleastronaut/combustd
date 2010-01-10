@@ -1,0 +1,48 @@
+#summary How to resolve and install libusb & ruby-usb
+#labels Phase-Deploy
+
+= Introduction =
+
+Because we want our application to run on multiple platforms and want an easy to develop application, we chose Ruby as our main language. This however means that users need to install libusb and ruby-usb manually.
+
+If you are running on Windows you should use the following only as a guideline :).
+
+= Installing =
+== Compiler toolchain ==
+If you are on Mac, you will need to install XCode to compile all dependencies, but since you're reading this page you will probably have done this already ;).
+
+If you are on linux install the toolchain, on ubuntu this used to be _apt-get install build-essential_
+
+== Ruby ==
+
+The application will need the ruby runtime available on your system. If you are running on mac then your Ruby version should be usable when using Mac OS X Leopard 10.5 or higher. Most linux distributions have ruby already installed or is a package manager call away from being installed (for instance yum install ruby).
+
+== Libusb ==
+=== Mac ===
+It's best to use a package manager like MacPorts, Fink or Homebrew here.
+
+For MacPorts: _port install libusb_
+For Fink: _fink install libusb_
+For Homebrew: _brew install libusb_
+
+=== Linux ===
+Depending on your system you may have either apt, yum or even ports.
+
+For apt: _apt-get install libusb_
+For yum: _yum install libusb_
+For ports: _port install libusb_
+
+== Ruby-usb ==
+This should be similar on both platforms.
+
+=== From source ===
+Grab the latest tar.gz from http://www.a-k-r.org/ruby-usb/ or use the svn version.
+
+_tar xvf ruby-usb*.tar.gz_
+_cd ruby-usb*_
+_ruby extconf.rb_
+_make_
+_make install_
+
+=== Gem install ===
+_gem install ruby-usb_
