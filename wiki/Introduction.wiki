@@ -1,0 +1,6 @@
+#summary Introduction sidebar
+
+= Getting started =
+
+[InstallingDependencies Dependencies]
+[ConfiguringBoblight Using Boblight under linux for effects]
