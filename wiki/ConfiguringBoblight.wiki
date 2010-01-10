@@ -21,7 +21,7 @@ Using boblight-x11 you can use the AmbX lights with every application like mplay
 
 = Configuration File =
 */etc/boblight.conf*
-{{{[global]
+`[global]
 interface	127.0.0.1
 port		19333
 
@@ -50,4 +50,4 @@ color           red     AmbX_Combust 1
 color           green   AmbX_Combust 2
 color           blue    AmbX_Combust 3
 hscan           0 100
-vscan           0 100}}}
+vscan           0 100`
