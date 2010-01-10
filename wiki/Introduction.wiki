@@ -5,3 +5,7 @@
 [InstallingDependencies Dependencies]
 
 [ConfiguringBoblight Using Boblight under linux for effects]
+
+= Stuff =
+
+[https://www.ohloh.net/p/combustd Ohloh page]
