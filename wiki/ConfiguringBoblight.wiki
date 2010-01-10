@@ -7,17 +7,17 @@ Using boblight-x11 you can use the AmbX lights with every application like mplay
 
 = Prerequisites =
 
-* Boblight: http://code.google.com/p/boblight/
-* Combustd 
+  * Boblight: http://code.google.com/p/boblight/
+  * Combustd 
 
 = Installation =
 
-* Install boblight according to the installation instructions.
-* Install ruby, libusb and ruby-usb
-* Get combustd
-* Configure boblight
-* Run boblightd
-* Run boblight-x11 (if on Linux)
+  * Install boblight according to the installation instructions.
+  * Install ruby, libusb and ruby-usb
+  * Get combustd
+  * Configure boblight
+  * Run boblightd
+  * Run boblight-x11 (if on Linux)
 
 = Configuration File =
 */etc/boblight.conf*
