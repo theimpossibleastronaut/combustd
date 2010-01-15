@@ -8,5 +8,3 @@ All code in this project is licensed under the very liberal and fair BSD license
 For dependencies read the file INSTALL.
 
 Enjoy!
-
-ps; for the newbs: cd examples/test-loop; ruby test-loop.rb
