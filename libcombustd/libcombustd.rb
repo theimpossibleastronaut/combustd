@@ -2,7 +2,7 @@ REQUIREMENTPATH = File.dirname(__FILE__)
 
 # ruby-usb; http://www.a-k-r.org/ruby-usb/
 # a ruby wrapper around libusb, needs to be compiled from source and gem installed.
-require 'usb'
+require "libusb"
 
 # Classes for definitions
 require REQUIREMENTPATH + '/data/protocoldefinitions'

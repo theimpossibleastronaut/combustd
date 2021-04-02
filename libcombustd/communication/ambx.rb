@@ -18,15 +18,15 @@ class Ambx
   
   # Find the device by finding it in the device tree, fail if it's not connected
   def Ambx.connect
-    USB.devices.each do |dev|
+    LIBUSB::Context.new.devices.each do |dev|
       if dev.idVendor == ProtocolDefinitions::USB_VENDOR_ID && dev.idProduct == ProtocolDefinitions::USB_PRODUCT_ID
         @device = dev
-        @bus = dev.bus
+        @bus = dev.bus_number
         break
       end
     end
     
-    if @device == nil
+    if @device.nil?
       @handle = nil
       @bus = nil
       return false
@@ -45,22 +45,20 @@ class Ambx
     end
     
     unless @device.nil?
-      @handle = @device.usb_open
-      
+      @handle = @device.open
       # we retry a few times to open the device or kill it
       unless @handle.nil?
         retries = 0
         begin
           begin
-            error_code = @handle.usb_claim_interface(0)
+            error_code = @handle.claim_interface(0)
           rescue ArgumentError
           end
           
-          raise CannotClaimInterfaceError unless error_code.nil?
+          raise CannotClaimInterfaceError if error_code.nil? # TODO: libusb doesn't return anything on error
           return true
         rescue CannotClaimInterfaceError
-          @handle.usb_detach_kernel_driver_np(0);
-          if retries.zero? 
+          @handle.auto_detach_kernel_driver = true
             retries += 1
             retry
           else
@@ -86,7 +84,7 @@ class Ambx
       end
       
       begin
-        @handle.usb_close
+        @handle.close
       rescue Errno::ENXIO
       end
       
@@ -107,8 +105,7 @@ class Ambx
 
     unless @handle.nil? && @device.nil?
       begin
-        @handle.usb_interrupt_write(ProtocolDefinitions::ENDPOINT_OUT, bytes.pack('C*'), 0);
-      rescue ArgumentError, Errno::EIO, NoMethodError
+        @handle.interrupt_transfer({ endpoint: ProtocolDefinitions::ENDPOINT_OUT, dataOut: bytes.pack('C*'), timeout: 0 })
         # quick fix to not immediatly segfault, but wait for segfault when application quits.
         # need a fix somewhere in ruby_usb, see issue #1 on google code.
       rescue Errno::ENXIO
